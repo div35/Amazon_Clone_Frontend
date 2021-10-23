@@ -14,7 +14,6 @@ const Cart = (props) => {
     else
       props.history.push("/login");
   }
-  console.log(props.cartProducts);
   var elem =
     props.cartProducts.length === 0 ? (
       <h4 className="text-center my-4"> Your Cart is Empty </h4>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
+const url = "https://ecomm-backend-server.herokuapp.com"
 
 export const placeOrder = (token, cart, address, totalValue) => {
   return (dispatch) => {
@@ -9,10 +10,9 @@ export const placeOrder = (token, cart, address, totalValue) => {
         headers: { authorization: `Bearer ${token}` },
       };
       axios
-        .post("/order/placeOrder", { cart, address, totalValue }, config)
+        .post(url + "/order/placeOrder", { cart, address, totalValue }, config)
         .then((res) => {
           let data = res.data;
-          //   console.log(data);
           dispatch({
             type: actionTypes.SUCCESS_FOR_ORDER,
             payload: data,
@@ -38,10 +38,9 @@ export const getAllOrder = (token) => {
         headers: { authorization: `Bearer ${token}` },
       };
       axios
-        .get("/order/getAllOrders", config)
+        .get(url + "/order/getAllOrders", config)
         .then((res) => {
           let data = res.data;
-          console.log(data);
           dispatch({
             type: actionTypes.SUCCESS_ALL_ORDERS,
             payload: data,

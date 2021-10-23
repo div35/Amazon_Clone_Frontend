@@ -41,7 +41,7 @@ const Orders = (props) => {
         </Col>
         <Col md={5}>
           {order.orderItems.map((item) => (
-            <Row className="my-2 border rounded-pill p-1">
+            <Row className="my-2 border rounded-pill p-1" key={item.Product}>
               <Col md={2}>
                 <Image src={item.image} fluid></Image>
               </Col>

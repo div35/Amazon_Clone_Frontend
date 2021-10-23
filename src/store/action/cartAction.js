@@ -1,10 +1,11 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
+const url = "https://ecomm-backend-server.herokuapp.com"
 
 export const addInCart = (id) => {
   return (dispatch, getState) => {
     axios
-      .get(`/products/${id}`)
+      .get(`${url}/products/${id}`)
       .then((res) => {
         const data = res.data;
         const newData = {
