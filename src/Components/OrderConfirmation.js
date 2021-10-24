@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Image, Container, Row, Col } from "react-bootstrap";
+import { Image, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router";
 const OrderConfirmation = (props) => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const OrderConfirmation = (props) => {
       >
         <Row>
           <Image
-            src="/images/orderSuccess.gif"
+            src="https://i.im.ge/2021/10/24/oDlXur.gif"
             style={{ borderRadius: "2rem" }}
             fluid
           />
