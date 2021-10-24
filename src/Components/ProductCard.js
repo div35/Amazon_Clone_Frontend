@@ -4,8 +4,8 @@ import Rating from "./Rating";
 import { NavLink } from "react-router-dom";
 const ProductCard = ({ product }) => {
   return (
-    <Row className="my-3 border py-2">
-      <Col md="3" className="mx-4">
+    <Row className="border-bottom border-top py-2">
+      <Col md="4" className="mx-4">
         <NavLink to={`/product/${product._id}`}>
           <Image
             className="rounded"
@@ -15,6 +15,7 @@ const ProductCard = ({ product }) => {
           ></Image>
         </NavLink>
       </Col>
+      <Col></Col>
       <Col md="6" className="my-5">
         <Row>
           <NavLink
@@ -25,7 +26,7 @@ const ProductCard = ({ product }) => {
           </NavLink>
         </Row>
         <Row>
-          <Rating rating={product.rating} reviews={product.numReviews} />
+          <Rating  rating={product.rating} reviews={product.numReviews} />
         </Row>
         <Row className="py-2">
           &nbsp;&nbsp; Price:{" "}
@@ -34,6 +35,7 @@ const ProductCard = ({ product }) => {
           </Col>
         </Row>
       </Col>
+      <Col></Col>
     </Row>
   );
 };

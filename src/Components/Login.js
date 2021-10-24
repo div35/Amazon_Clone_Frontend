@@ -21,7 +21,7 @@ const Login = (props) => {
   };
 
   return (
-    <Container style={{ margin: "2rem" }}>
+    <div style={{ margin: "2rem" }}>
       <h1 className="text-center ">Log In</h1>
       {props.error ? (
         <p className="text-center" style={{ color: "red" }}>
@@ -29,7 +29,7 @@ const Login = (props) => {
         </p>
       ) : null}
       <Row>
-        <Col></Col>
+        <Col xs={0} md={3}></Col>
         <Col xs={12} md={6}>
           <Form onSubmit={submitFormHandler}>
             <Form.Group className="mx-5 mb-3" controlId="formBasicEmail">
@@ -71,9 +71,9 @@ const Login = (props) => {
             {props.loading ? <SpinnerBar /> : null}
           </Form>
         </Col>
-        <Col></Col>
+        <Col xs={0} md={3}></Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 

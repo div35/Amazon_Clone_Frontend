@@ -26,7 +26,7 @@ const Cart = (props) => {
             </Col>
             <Col className="d-flex align-items-center">
               <Row>
-                <h5>{p.name}</h5>
+                <h5 className="text-center my-1">{p.name}</h5>
                 <h6 className="text-center my-1">
                   Price:{" "}
                   <strong style={{ color: "#B12704" }}>${p.price}</strong>

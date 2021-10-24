@@ -25,14 +25,15 @@ const ProdDetail = (props) => {
       ) : props.loading ? (
         <SpinnerBar />
       ) : props.currProd ? (
-        <Row className="m-5">
+        <Row className="m-4">
           <NavLink to="/" style={{ textDecoration: "none" }}>
             <i className="fas fa-arrow-left"></i> Back
           </NavLink>
+          <h1 className="text-center" style={{marginBottom:"3rem"}}>About Product</h1>
           <Col></Col>
           <Col md={5}>
             <Image
-              className="border rounded"
+              className=" rounded"
               src={props.currProd.image}
               fluid
             />
@@ -113,7 +114,7 @@ const mapStateToProps = (state) => {
   return {
     currProd: state.product.currProd,
     loading: state.product.loading,
-    error: state.product.error
+    error: state.product.error,
   };
 };
 

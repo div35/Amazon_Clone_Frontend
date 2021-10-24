@@ -20,7 +20,7 @@ const NavHeading = (props) => {
             {props.user ? <Nav.Link onClick={logoutHandler}>
             <i class="fas fa-sign-out-alt"></i> &nbsp; Logout
             </Nav.Link> : <Nav.Link as={NavLink} to="/login">
-              <i className="fas fa-sign-in-alt"></i> &nbsp; SignIn
+              <i className="fas fa-sign-in-alt"></i> &nbsp; LogIn
             </Nav.Link>}
             &nbsp;&nbsp;&nbsp;
             <Nav.Link as={NavLink} to="/orders">
