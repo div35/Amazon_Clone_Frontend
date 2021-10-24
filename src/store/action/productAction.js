@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
-const url = "https://ecomm-backend-server.herokuapp.com"
+const url = "https://ecomm-backend-server.herokuapp.com";
 
 export const getAllProducts = () => {
   return (dispatch) => {
@@ -14,8 +14,7 @@ export const getAllProducts = () => {
       .catch((err) => {
         dispatch({
           type: actionTypes.FAIL_FOR_ALLPRODUCTS,
-          payload:
-            err.response 
+          payload: err.response,
         });
       });
   };

@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
-const url = "https://ecomm-backend-server.herokuapp.com"
+const url = "https://ecomm-backend-server.herokuapp.com";
 export const login = (email, password) => {
   return (dispatch) => {
     dispatch({ type: actionTypes.LOGIN_REQUEST });
@@ -14,8 +14,7 @@ export const login = (email, password) => {
       .catch((err) => {
         dispatch({
           type: actionTypes.LOGIN_REQUEST_FAIL,
-          payload:
-            err.response 
+          payload: err.response,
         });
       });
   };
@@ -34,8 +33,7 @@ export const signup = (name, email, password) => {
       .catch((err) => {
         dispatch({
           type: actionTypes.SIGNUP_REQUEST_FAIL,
-          payload:
-            err.response 
+          payload: err.response,
         });
       });
   };

@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
-const url = "https://ecomm-backend-server.herokuapp.com"
+const url = "https://ecomm-backend-server.herokuapp.com";
 
 export const addInCart = (id) => {
   return (dispatch, getState) => {
@@ -51,7 +51,7 @@ export const deleteFromCart = (id) => {
 export const deleteCart = () => {
   return (dispatch, getState) => {
     try {
-      dispatch({ type: actionTypes.DELETE_CART});
+      dispatch({ type: actionTypes.DELETE_CART });
       localStorage.setItem(
         "cartProducts",
         JSON.stringify(getState().cart.cartProducts)
@@ -66,8 +66,6 @@ export const deleteCart = () => {
   };
 };
 
-
-
 export const addAddress = (address) => {
   return (dispatch) => {
     try {
@@ -78,4 +76,3 @@ export const addAddress = (address) => {
     }
   };
 };
-

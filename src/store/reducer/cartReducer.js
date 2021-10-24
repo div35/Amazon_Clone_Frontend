@@ -8,7 +8,8 @@ let initialState = {
     ? parseInt(localStorage.getItem("totalValue"))
     : 0,
   address: localStorage.getItem("address")
-  ? JSON.parse(localStorage.getItem("address")) : null,
+    ? JSON.parse(localStorage.getItem("address"))
+    : null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -29,7 +30,9 @@ const reducer = (state = initialState, action) => {
         };
       }
     case actionTypes.DELETE_FROM_CART:
-      const newCart = state.cartProducts.filter((p) => p.Product != action.payload);
+      const newCart = state.cartProducts.filter(
+        (p) => p.Product != action.payload
+      );
       const price = state.cartProducts.find(
         (p) => p.Product == action.payload
       ).price;
@@ -38,12 +41,12 @@ const reducer = (state = initialState, action) => {
         totalValue: state.totalValue - price,
         cartProducts: newCart,
       };
-      case actionTypes.DELETE_CART:
-        return{
-          ...state,
-          totalValue: 0,
-          cartProducts:[]
-        }
+    case actionTypes.DELETE_CART:
+      return {
+        ...state,
+        totalValue: 0,
+        cartProducts: [],
+      };
     case actionTypes.ADD_ADDRESS:
       return {
         ...state,

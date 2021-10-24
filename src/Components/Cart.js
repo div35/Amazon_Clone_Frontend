@@ -9,11 +9,9 @@ const Cart = (props) => {
     props.deleteFromCart(id);
   };
   const checkoutHandler = () => {
-    if(props.user)
-      props.history.push("/address");
-    else
-      props.history.push("/login");
-  }
+    if (props.user) props.history.push("/address");
+    else props.history.push("/login");
+  };
   var elem =
     props.cartProducts.length === 0 ? (
       <h4 className="text-center my-4"> Your Cart is Empty </h4>
@@ -66,15 +64,19 @@ const Cart = (props) => {
           </Col>
         </Row>
         <Row>
-        <Button
-                  style={{ width: "max-content", margin: "auto" }}
-                  className="btn-pr my-4"
-                  type="button"
-                  onClick={checkoutHandler}
-                  disabled={props.totalValue == 0 || props.cartProducts.length == 0 ? true : false}
-                >
-                  {props.user ? "Proceed To Checkout" : "Login To Place Order"}
-                </Button>
+          <Button
+            style={{ width: "max-content", margin: "auto" }}
+            className="btn-pr my-4"
+            type="button"
+            onClick={checkoutHandler}
+            disabled={
+              props.totalValue == 0 || props.cartProducts.length == 0
+                ? true
+                : false
+            }
+          >
+            {props.user ? "Proceed To Checkout" : "Login To Place Order"}
+          </Button>
         </Row>
       </Container>
     </Container>
@@ -85,7 +87,7 @@ const mapStateToProps = (state) => {
   return {
     cartProducts: state.cart.cartProducts,
     totalValue: state.cart.totalValue,
-    user: state.user.user
+    user: state.user.user,
   };
 };
 

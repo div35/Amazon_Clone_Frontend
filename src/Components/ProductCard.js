@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
           </NavLink>
         </Row>
         <Row>
-          <Rating  rating={product.rating} reviews={product.numReviews} />
+          <Rating rating={product.rating} reviews={product.numReviews} />
         </Row>
         <Row className="py-2">
           &nbsp;&nbsp; Price:{" "}

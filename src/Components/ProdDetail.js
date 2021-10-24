@@ -29,14 +29,12 @@ const ProdDetail = (props) => {
           <NavLink to="/" style={{ textDecoration: "none" }}>
             <i className="fas fa-arrow-left"></i> Back
           </NavLink>
-          <h1 className="text-center" style={{marginBottom:"3rem"}}>About Product</h1>
+          <h1 className="text-center" style={{ marginBottom: "3rem" }}>
+            About Product
+          </h1>
           <Col></Col>
           <Col md={5}>
-            <Image
-              className=" rounded"
-              src={props.currProd.image}
-              fluid
-            />
+            <Image className=" rounded" src={props.currProd.image} fluid />
           </Col>
           <Col></Col>
           <Col md={5} className="px-4">

@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
-const url = "https://ecomm-backend-server.herokuapp.com"
+const url = "https://ecomm-backend-server.herokuapp.com";
 
 export const placeOrder = (token, cart, address, totalValue) => {
   return (dispatch) => {
