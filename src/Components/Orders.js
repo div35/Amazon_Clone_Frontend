@@ -41,7 +41,7 @@ const Orders = (props) => {
         </Col>
         <Col md={5}>
           {order.orderItems.map((item) => (
-            <Row className="my-2 border rounded-pill p-1" key={item.Product}>
+            <Row className="my-2 border rounded p-1" key={item.Product}>
               <Col md={2}>
                 <Image src={item.image} fluid></Image>
               </Col>
@@ -65,7 +65,7 @@ const Orders = (props) => {
           <Row className=" m-3">
             <Col></Col>
             <Col>
-              <h4>Cost:</h4>
+              <h4>Total:</h4>
             </Col>
             <Col>
               <h4 style={{ color: "#B12704" }}>${order.totalValue}</h4>

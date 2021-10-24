@@ -119,8 +119,8 @@ const Address = (props) => {
                     An Error Occured, Please Try Again Later
                   </p>
                 ) : null}
-                <Button variant="primary" type="submit">
-                  Place You Order
+                <Button variant="primary" type="submit" disabled={props.loading}>
+                  Place Your Order
                 </Button>
                 {props.loading ? (
                   <Spinner
